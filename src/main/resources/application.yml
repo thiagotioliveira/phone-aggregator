@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+app:
+  integration:
+    sector:
+      getByNumber:
+        url: https://challenge-business-sector-api.meza.talkdeskstg.com/sector/%s
+  number:
+    reservedChars: \+, 00
+    regex: (\+|00)(([1-9])(\s*\d)(\s*\d)|([1-9])(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d)|([1-9])(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d)|([1-9])(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d)|([1-9])(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d)|([1-9])(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d)|([1-9])(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d)(\s*\d))$
+  repository:
+    file:
+      path: /static/prefixes.txt
+
+logging:
+  level:
+    root: INFO
+    com.thiagoti.challenge.talkdesk.phoneaggregator: INFO
